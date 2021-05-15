@@ -29,11 +29,11 @@ export class LoginComponent {
 
   public onSubmit(values:Object):void {
       if (this.form.valid) {
-          this.router.navigate(['/']);
+          this.router.navigate(['/admin']);
       }
   }
 
   ngAfterViewInit(){
-      // document.getElementById('preloader').classList.add('hide');                 
+      document.getElementById('preloader').classList.add('hide');                 
   }
 }

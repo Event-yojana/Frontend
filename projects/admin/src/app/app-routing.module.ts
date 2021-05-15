@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './Shared/login/login.component';
 
 const routes: Routes = [
 
-  { path: '', component: LoginComponent},
+  { path: '', loadChildren: () => import('./Layout/Content-pages/content-pages.module').then(m => m.ContentPagesModule) },
+  { path: 'admin', loadChildren: () => import('./Layout/Full-pages/full-pages.module').then(m => m.FullPagesModule) },
 ];
 
 @NgModule({
